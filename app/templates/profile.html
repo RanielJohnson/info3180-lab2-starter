@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/app.css')}}"/> 
+
+{% block main %}
+    <div class="card">
+        <section class="cardcontainer">
+            <img id="pfp" src="{{url_for('static', filename='img/itsme.png')}}"/>
+            <h2 class="cardtitle">Raniel Johnson</h2>
+            <h6>@rjohnson</h6>
+            <h6>Kingston, Jamaica</h6>
+            <h6>{{theDay}}</h6>
+        </section>
+        <section class="cardcontainer">
+            <p>A dedicated problem solver, really starting to appreciate web development</p>
+            <section class="statscontainer">
+                <div class="statitem">
+                    <h5>7</h5>
+                    <span>Posts</span>
+                </div>
+                <div class="statitem">
+                    <h5>100</h5>
+                    <span>Following</span>
+                </div>
+                <div class="statitem">
+                    <h5>250</h5>
+                    <span>Followers</span>
+                </div>
+            </section>
+            <button>Follow</button>
+        </section>
+    </div>
+{% endblock %}
